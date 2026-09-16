@@ -67,7 +67,7 @@ def flag_approx_above_exact(df, approx_col, exact_col, label, checks):
     checks.add(
         f"{label}: {approx_col} <= {exact_col}",
         not mask.any(),
-        f"{int(mask.sum())} rows where the estimate exceeds exact events (flagged)",
+        f"{int(mask.sum())} row{'s' if mask.sum() != 1 else ''} where the estimate exceeds exact events (flagged)",
         severity="warning",
     )
     return df

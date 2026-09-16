@@ -1,7 +1,7 @@
 check,status,detail
 Q2: user_swaps <= swap_events,warning,52 rows where the estimate exceeds exact events (flagged)
 Q3: user_swaps <= swap_events,warning,19 rows where the estimate exceeds exact events (flagged)
-Q5: user_swaps <= swap_events,warning,1 rows where the estimate exceeds exact events (flagged)
+Q5: user_swaps <= swap_events,warning,1 row where the estimate exceeds exact events (flagged)
 Q6: user_swaps <= swap_events,warning,23 rows where the estimate exceeds exact events (flagged)
 Q4: 105 unique token mints,pass,"105 rows, 105 unique"
 Q2: all top-100 tokens mapped in Q4,pass,0 unmapped
