@@ -170,6 +170,7 @@ fee ratio, and the fee-event coverage the ratio depends on
 ### Refreshing
 
 After re-running the pipeline, **refresh** the Power BI model. The generated CSV files must keep the same names and paths.
+
 ---
 
 ## Repository structure
