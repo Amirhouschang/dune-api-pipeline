@@ -3,7 +3,7 @@
 A small ETL pipeline: stored query results are fetched from the Dune API,
 cleaned and checked in Python, and modelled as a star schema for Power BI.
 
-**Data source:** [solana-jupiter-trading-analysis]([https://github.com/Amirhoushang/solana-jupiter-trading-analysis](https://github.com/Amirhouschang/solana-jupiter-trading-analysis))
+**Data source:** [solana-jupiter-trading-analysis](https://github.com/Amirhouschang/solana-jupiter-trading-analysis)
 — SQL analysis of Jupiter v6 swaps on Solana, H1 2026.
 
 ```
