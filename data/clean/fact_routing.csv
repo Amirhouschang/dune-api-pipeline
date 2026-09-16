@@ -1,0 +1,9 @@
+category,transactions,dominant_category_events,events_per_transaction,method
+Stablecoin,68525537,106152764,1.54909787864924,all_events
+Cross-Chain Asset,13425990,16177227,1.2049187434222728,all_events
+Liquid Staking,3370006,3996930,1.1860305293224995,all_events
+Native Solana,118460887,130317509,1.1000889179565234,all_events
+Unmapped,16355364,17513260,1.070796100899986,all_events
+Tokenized RWA,573675,613131,1.0687776179892796,all_events
+Meme Coin,46677517,48249214,1.0336713925892844,all_events
+Other,173100,173100,1.0,all_events

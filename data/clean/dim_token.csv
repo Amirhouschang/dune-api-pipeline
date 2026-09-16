@@ -1,0 +1,106 @@
+token_mint,symbol,name,category,flag,in_top100_by_count
+So11111111111111111111111111111111111111112,WSOL,wrapped SOL,Native Solana,,True
+pumpCmXqMfrsAkQ5r49WcJnRayYRqmXz6ae8H7H9Dfn,PUMP,Pump,Native Solana,,True
+27G8MtK7VtTcCHkpASjSDdkWWYfoqT6ggEuKidVJidD4,JLP,Jupiter Perps LP,Native Solana,,True
+JUPyiwrYJFskUPiHa7hkeR8VUtAeFoSYbKedZNsDvCN,JUP,Jupiter,Native Solana,,True
+4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R,RAY,Raydium,Native Solana,,True
+orcaEKTdK7LKz57vaAYr9QeNsVEPfiu6QeMU1kektZE,ORCA,Orca,Native Solana,,True
+KMNo3nJsBXfcpJTVhZcXLW7RmTwTt4GVFE7suUBo9sS,KMNO,Kamino,Native Solana,,True
+METvsvVRapdj9cFLzq4Tr43xK4tAjQfwX76z3n6mWQL,MET,Meteora,Native Solana,,True
+SarosY6Vscao718M4A778z4CGtvcwcGef5M9MEH1LGL,SAROS,Saros,Native Solana,,True
+SKRbvo6Gf7GondiT3BbTfuRDPqLWei4j2Qy2NPGZhW3,SKR,Seeker,Native Solana,,True
+jtojtomepa8beP8AuQc6eXt5FriJwfFMwQx2v2f9mCL,JTO,JITO,Native Solana,,True
+METAewgxyPbgwsseH8T16a39CQ5VyVxZi9zXiDPY18m,MPLX,Metaplex Token,Native Solana,,True
+DBRiDgJAMsM95moTzJs7M9LnkGErpbv9v6CUR1DXnUu5,DBR,deBridge,Native Solana,,True
+hntyVP6YFm1Hg25TN9WGLqM12b8TQmcknKrdu1oxWux,HNT,Helium Network Token,Native Solana,,True
+7JA5eZdCzztSfQbJvS8aVVxMFfd81Rs9VvwnocV1mKHu,GEOD(SOL),Geodnet Token,Native Solana,,True
+oreoU2P8bN6jkk3jbaiVxYnG1dCXcYxwhwyK9jSybcp,ORE,ORE,Native Solana,,True
+ZBCNpuD7YMXzTHB2fhGkGi78MNsHGLRXUhRewNRm9RU,ZBCN,Zebec Network,Native Solana,,True
+J6pQQ3FAcJQeWPPGppWRb4nM8jU3wLyYbRrLh7feMfvd,2Z,DoubleZero,Native Solana,,True
+WETZjtprkDMCcUxPi9PfWnowMRZkiGGHDb9rABuRZ2U,WET,HumidiFi Token,Native Solana,,True
+J1toso1uCk3RLmjorhTtrVwY9HJ7X8V9yYac6Y7kGCPn,JitoSOL,Jito Staked SOL,Liquid Staking,,True
+mSoLzYCxHdYgdzU16g5QSh3i5K3z3KZK7ytfqcJm7So,mSOL,Marinade staked SOL (mSOL),Liquid Staking,,True
+jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v,JupSoL,Jupiter Staked SOL,Liquid Staking,,True
+7dHbWXmci3dT8UFYWYZweBLXgycu7Y3iL6trKn1Y7ARj,stSOL,Lido Staked SOL,Liquid Staking,,True
+bSo13r4TkiE4KumL71LsHTPpL2euBYLFx6h9HP3piy1,bSOL,,Liquid Staking,,True
+5oVNBeEEQvYi1cX3ir8Dx5n1P7pdxydbGF2X4TxVusJm,INF,Infinity,Liquid Staking,,True
+EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v,USDC,USD Coin,Stablecoin,,True
+Es9vMFrzaCERmJfrF4H2FYD4KCoNkY11McCe8BenwNYB,USDT,USDT,Stablecoin,,True
+USD1ttGY1N17NEEHLmELoaybftRBUSErhqYiQzvEmuB,USD1,World Liberty Financial USD,Stablecoin,,True
+2u1tszSeqZ3qBWF3uNGPFc8TzMk2tdiwknnRMWGWjGWH,USDG,Global Dollar,Stablecoin,,True
+JuprjznTrTSp2UFa3ZBUFgwdAmtZCq4MQCwysN55USD,JupUSD,Jupiter USD,Stablecoin,,True
+2b1kV6DkPAnxd5ixfnxCpjxmKwqjjaYmCZfHsFu24GXo,PyUSD,Paypal USD,Stablecoin,,True
+HzwqbKZw8HxMN6bF2yFZNrht3c2iXXzpKcFu7uBEDKtr,EURC,EURC,Stablecoin,,True
+USDSwr9ApdHk5bvJKMjzff41FfuX8bSxdKcR81vTwcA,USDS,USDS,Stablecoin,,True
+5YMkXAYccHSGnHn9nob9xEvv6Pvka9DZWH7nTbotTu9E,hyUSD,hyUSD,Stablecoin,,True
+AvZZF1YaZDziPY2RCK4oJrRVrbN3mTD9NL24hPeaZeUj,syrupUSDC,Syrup USDC,Stablecoin,,True
+CASHx9KJUStyftLFWGvEVf59SGeG9sh5FfcnZMVPCASH,CASH,CASH,Stablecoin,,True
+DEkqHyPN7GMRJ5cArtQFAWefqbZb33Hyf6s5iCwjEonT,USDe,,Stablecoin,,False
+7GxATsNMnaC88vdwd2t3mwrFuQwwGvmYPrUQ4D6FotXk,jlJupUSD,,Stablecoin,,False
+6FrrzDk5mQARGc1TDYoyVnSyRdds1t4PbtohCD6p3tgG,USX,,Stablecoin,,False
+cbbtcf3aa214zXHbiAZQwf4122FBYbraNdFqgw4iMij,cbBTC,Coinbase Wrapped BTC,Cross-Chain Asset,,True
+7vfCXTUXx5WJV5JADk17DUJ4ksgau7utNKj4b963voxs,WETH,Wrapped Ether (Wormhole),Cross-Chain Asset,,True
+3NZ9JMVBmGAqocybic2c7LQCJScmgsAZ6vQqTDzcqmJh,WBTC,Wrapped BTC (Wormhole),Cross-Chain Asset,,True
+CtzPWv73Sn1dMGVU3ZtLv9yWSyUAanBni19YWDaznnkn,xBTC,OKX Wrapped BTC,Cross-Chain Asset,,True
+zBTCug3er3tLyffELcvDNrKkCymbPWysGcWihESYfLg,zBTC,zBTC,Cross-Chain Asset,,True
+98sMhvDwXj1RQi5c5Mndm3vPe9cBqPrbLaufMXFNMh5g,HYPE,HYPE,Cross-Chain Asset,,True
+A7bdiYdS5GjqGFtxf17ppRHtDKPkkRqbKtR27dxvQXaS,ZEC,Zcash,Cross-Chain Asset,,True
+CrAr4RRJMBVwRsZtT62pEhfA9H5utymC2mVx8e7FreP2,MON,Monad,Cross-Chain Asset,,True
+EicWvteVi2fWepEzS3FYWsnuPoP6caZfjnKqNvydLjCH,LIT,Lighter,Cross-Chain Asset,,True
+XsDoVfqeBukxuZHWhdvWHBhgEHjGNst4MLodqsJHzoB,TSLAx,Tesla xStock,Tokenized RWA,,True
+XsueG8BtpquVJX9LVLLEGuViXUungE6WmK5YZ3p3bd1,CRCLx,Circle xStock,Tokenized RWA,,True
+Xsc9qvGR1efVDFGLrVsmkzv3qi45LTBjeUKSPmx9qEh,NVDAx,NVIDIA xStock,Tokenized RWA,,True
+XsoCS1TfEyfFhfvj8EtZ528L3CaKBDBRqRapnBbDF2W,SPYx,SP500 xStock,Tokenized RWA,,True
+SPCXxcqXj6e5dJDVNovHN8744zkbhM2bYudU45BimGb,SPCX,SpaceX - Backpack Securities,Tokenized RWA,,True
+AymATz4TCL9sWNEEV9Kvyz45CHVhDZ6kUgjTJPzLpU9P,XAUt0,Tether Gold,Tokenized RWA,,True
+kLqMvUm1p4pRbxU4r8kWCTVAuWMJLtcTJqGb4b5pump,BRENT,Brent Crude,Tokenized RWA,,True
+USoRyaQjch6E18nCdDvWoRgTo6osQs9MUd8JXEsspWR,USOR,U.S Oil,Tokenized RWA,,True
+5Y8NV33Vv7WbnLfq3zBcKSdYPrk7g2KoiQoe7M2tcxp5,ONyc,ONe,Tokenized RWA,,True
+Xs8S1uUs1zvS2p7iwtsG3b6fkhpvmwz4GYU3gWAmWHZ,QQQx,,Tokenized RWA,,False
+9BB6NFEcjBCtnNLFko2FqVQBq8HHM13kCyYcdQbgpump,Fartcoin,Fartcoin,Meme Coin,,True
+DMYNp65mub3i7LRpBdB66CgBAceLcQnv4gsWeCi6pump,丙午,bǐngwǔ,Meme Coin,,True
+6p6xgHyF7AeE6TZkSmFsko444wqoP15icUSqi2jfGiPN,TRUMP,OFFICIAL TRUMP,Meme Coin,,True
+8jiVXftnn2ZG6bugK7HAH5j2G3D6TpsG521gqsWwpump,AUTISM,Autism Coin,Meme Coin,,True
+DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263,Bonk,Bonk,Meme Coin,,True
+Dz9mQ9NzkBcCsuGPFJ3r1bS4wgqKMHBPiVuniW8Mbonk,USELESS,USELESS COIN,Meme Coin,,True
+a3W4qutoEJA4232T2gwZUfgYJTetr96pU4SJMwppump,WhiteWhale,The White Whale,Meme Coin,,True
+Dfh5DzRgSvvCFDoYc2ciTkMrbDfRKybA4SoFbPmApump,pippin,Pippin,Meme Coin,,True
+BBG3vpXVCm2uPBD7LUr7yfP9XUXVNJRHMtiMG7q4pump,PURK,Purple Wojak,Meme Coin,,True
+8Jx8AAHj86wbQgUTjGuj6GTTL5Ps3cqxKRTvpaJApump,PENGUIN,Nietzschean Penguin,Meme Coin,,True
+7fj85y28pKMndm4So66Szkb5GMGfLHFEkwsZdDx2pump,NICE,NICE,Meme Coin,,True
+CreiuhfwdWCN5mJbMJtA9bBpYQrQF2tCBuZwSPWfpump,PYTHIA,PYTHIA,Meme Coin,,True
+CAjtTHvC878f8cZ4zEwdvgjkjFM7rbYN8Mb1go1cpump,DUMBMONEY,Dumb Money,Meme Coin,,True
+7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr,POPCAT,Popcat,Meme Coin,,True
+4TyZGqRLG3VcHTGMcLBoPUmqYitMVojXinAmkL8xpump,testicle,testicle,Meme Coin,,True
+4D9jZY6nkXnm3ofmWWJVcJrvtXDMfE5Zwy8rZMy5pump,JEW,Jewish Engineered Wealth Coin,Meme Coin,,True
+pixvL7orpc8AfVUmeQ3kJZ588EegnXSQd7UW4TcVzDk,PIXELS,One Million Pixels,Meme Coin,,True
+EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm,$WIF,dogwifhat,Meme Coin,,True
+61V8vBaqAGMpgDQi4JcAwo1dmBGHsyhzodcPqnEVpump,arc,AI Rig Complex,Meme Coin,,True
+3BHhMXMyyGGzLcTk6u5iJwTcV7eEGG9bWJrTKUttpump,FML,FML,Meme Coin,,True
+J3NKxxXZcnNiMjKw9hYb2K4LUxgwB6t1FtPtQVsv3KFr,SPX,SPX6900 (Wormhole),Meme Coin,,True
+6MFiqqkS4MUwmkoa8sj5UJcFzJGVxHD1yEpoyRRUdoge,TARO,Ryotaro,Meme Coin,,True
+kMKX8hBaj3BTRBbeYix9c16EieBP5dih8DTSSwCpump,afk,afk,Meme Coin,,True
+4FdojUmXeaFMBG6yUaoufAC5Bz7u9AwnSAMizkx5pump,core,core,Meme Coin,,True
+E714f3oiK3sA8WGBBpmgx7Vkptz7Xh7H9YNWjpkLpump,$JAC,Just A Coin,Meme Coin,,True
+8opvqaWysX1oYbXuTL8PHaoaTiXD69VFYAX4smPebonk,WAR,WAR,Meme Coin,,True
+FmjijgwEHpe32VPvHy1s7u7TLthh9yu1j75djVbWpump,DEGEN,Degen Coin,Meme Coin,,True
+ChNrhBZwGtn1ZRsrdzcuBqiKTYfVViCPZqJdsgBHpump,APES,Apes Together Strong,Meme Coin,,True
+NV2RYH954cTJ3ckFUpvfqaQXU4ARqqDH3562nFSpump,Punch,パンチ,Meme Coin,,True
+8f62NyJGo7He5uWeveTA2JJQf4xzf8aqxkmzxRQ3mxfU,FIGHT,Fight,Meme Coin,,True
+Cm6fNnMk7NfzStP9CZpsQA2v3jjzbcYGAxdJySmHpump,Buttcoin,Buttcoin,Meme Coin,,True
+5UUH9RTDiSpq6HKS6bp4NdU9PNJpXRXuiw6ShBTBhgH2,TROLL,TROLL,Meme Coin,,True
+JE8zmsKRivXggZsJxXHBdCkako85YawNtU5hqS4upump,PAX,Paxton Pengu,Meme Coin,,True
+x95HN3DWvbfCBtTjGm587z8suK3ec6cwQwgZNLbWKyp,$HACHI,Hachiko,Meme Coin,,True
+Ce2gx9KGXJ6C9Mp5b5x1sn9Mg87JwEbrQby4Zqo3pump,neet,NotInEmploymentEducationTraining,Meme Coin,,True
+8Hg96R1AGDe5vKABwniVPT2LHdhZHmCTFijZAXXZpump,XSPA,XSPA,Meme Coin,,True
+4YiLHDR4B4pE4R5GUMA8HG8YunyeLwcobtEtvwMupump,ROCKET,ROCKET,Meme Coin,,True
+2zMMhcVQEXDtdE6vsFS7S7D5oUodfJHE8vd1gnBouauv,PENGU,Test,Meme Coin,,True
+G7vQWurMkMMm2dU3iZpXYFTHT9Biio4F4gZCrwFpKNwG,BIRB,SPL Token,Meme Coin,,True
+HmBdm8vbisABUjkxms6ZUnoaXbfwFM6ymxShWfAENaoi,EITHER,Eitherway,Meme Coin,,True
+NgsodHAjoLZF5VC25euE1wBiZUgTVMHSErMRRKt74mA,NGMA,EnigmaAI,Meme Coin,,True
+2k8yZaJjf61unHriuqdmvbxe7CUhEYML5kVJDbcotKjU,BFS,BFS,Meme Coin,,True
+gLEXZ2kAfuYkpeeSzrEMbakiNeqAAZ3TsKiY9Can8pE,SPARQ,TheContentForge,Meme Coin,,True
+1ogCsoK7ZqZwiYam9i7xq2j6Bf2LizT6iQtGSp6vCoT,LOG,LOG,Meme Coin,,True
+C8fU5GdfAt5mnw2RK7HE6XJGFNxHpaskZMkXxdm88888,CTM,c8ntinuum,Meme Coin,,True
+FeR8VBqNRSUD5NtXAj2n3j1dAHkZHfyDktKuLXD4pump,jellyjelly,,Meme Coin,,False
+Es9vdPD6sXzHhbAskU19WFnAtyRo94HKrGrPSdQ3aSSB,USDT (impostor),USD Tether,Other,impostor,True

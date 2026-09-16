@@ -1,0 +1,2 @@
+total_swap_events,total_user_swaps,total_traders,dex_programs_used,distinct_input_tokens,distinct_output_tokens,first_swap,last_swap,avg_events_per_transaction,pct_events_top_100_tokens,pct_events_top_500_tokens
+465238625,267562076,7970524,89,1136645,1074350,2026-01-01,2026-06-30 23:59:59,1.738806306017748,88.05080747541113,91.85693255799644

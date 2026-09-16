@@ -1,0 +1,17 @@
+check,status,detail
+Q2: user_swaps <= swap_events,warning,52 rows where the estimate exceeds exact events (flagged)
+Q3: user_swaps <= swap_events,warning,19 rows where the estimate exceeds exact events (flagged)
+Q5: user_swaps <= swap_events,warning,1 rows where the estimate exceeds exact events (flagged)
+Q6: user_swaps <= swap_events,warning,23 rows where the estimate exceeds exact events (flagged)
+Q4: 105 unique token mints,pass,"105 rows, 105 unique"
+Q2: all top-100 tokens mapped in Q4,pass,0 unmapped
+Q5: event total equals Q1,pass,"465,238,625 vs 465,238,625"
+Q5: shares sum to 100%,pass,100.0000
+Q6: event total equals Q1,pass,"465,238,625 vs 465,238,625"
+Q6: program count equals Q1,pass,89 vs 89
+Q7: transactions equal Q1,pass,"267,562,076 vs 267,562,076"
+Q7: legs_per_swap >= 1,pass,min 1.0000
+C2: transactions equal Q1,pass,"267,562,076 vs 267,562,076"
+Q9: each week sums to 100%,pass,max deviation 0.000000
+Q9: event total equals Q1,pass,"465,238,625 vs 465,238,625"
+Categories known,pass,unknown: none

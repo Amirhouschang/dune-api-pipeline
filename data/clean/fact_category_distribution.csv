@@ -1,0 +1,10 @@
+category,mapping_method,swap_events,transactions_est,signers_est,dex_programs_est,pct_of_swap_events,estimate_exceeds_events,method
+Stablecoin,manual,182984804,141227682,2400577,75,39.3313869844749,False,all_events
+Native Solana,manual,177404146,159373771,6433223,74,38.13186104227696,False,all_events
+Unmapped,none,27665477,25968615,1065941,73,5.94651336182588,False,all_events
+Meme Coin,suffix,27578814,26577030,1427176,23,5.927885716711505,False,all_events
+Meme Coin,manual,23503392,22359632,3399235,34,5.051900409171745,False,all_events
+Cross-Chain Asset,manual,18191049,15297319,141351,42,3.91004702156877,False,all_events
+Liquid Staking,manual,5724170,5195875,65122,32,1.230372908096356,False,all_events
+Tokenized RWA,manual,2013515,1971003,27915,22,0.432791881800442,False,all_events
+Other,manual,173258,182595,261,1,0.037240674073439,True,all_events

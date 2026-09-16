@@ -1,0 +1,9 @@
+category,sort_order,is_classified
+Stablecoin,1,True
+Native Solana,2,True
+Meme Coin,3,True
+Cross-Chain Asset,4,True
+Liquid Staking,5,True
+Tokenized RWA,6,True
+Other,7,True
+Unmapped,8,False

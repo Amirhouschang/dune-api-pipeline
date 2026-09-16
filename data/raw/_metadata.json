@@ -1,0 +1,79 @@
+{
+  "q1_baseline": {
+    "query_id": 8724188,
+    "execution_id": "01M2J3WW8HJAA6JK0AWVCYFDVP",
+    "execution_ended_at": "2026-09-15T08:46:56.668135Z",
+    "total_row_count": 1,
+    "fetched_at": "2026-09-16T10:26:44.355464+00:00"
+  },
+  "c1_coverage": {
+    "query_id": 8724689,
+    "execution_id": "01M2MSFEMX107D2062TWFW8V7N",
+    "execution_ended_at": "2026-09-16T09:41:42.22397Z",
+    "total_row_count": 1,
+    "fetched_at": "2026-09-16T10:26:44.529159+00:00"
+  },
+  "c2_fee_coverage": {
+    "query_id": 8732013,
+    "execution_id": "01M2MKYNYB7TPZNZZDEJTKW07M",
+    "execution_ended_at": "2026-09-16T08:05:44.752101Z",
+    "total_row_count": 8,
+    "fetched_at": "2026-09-16T10:26:44.704016+00:00"
+  },
+  "q2_tokens_by_count": {
+    "query_id": 8724549,
+    "execution_id": "01M2MKA4D0FQ04X52EDH9DECAR",
+    "execution_ended_at": "2026-09-16T07:55:11.128361Z",
+    "total_row_count": 100,
+    "fetched_at": "2026-09-16T10:26:44.893426+00:00"
+  },
+  "q3_tokens_by_volume": {
+    "query_id": 8726202,
+    "execution_id": "01M2MKK3G494F5RGEB0J41H8JF",
+    "execution_ended_at": "2026-09-16T07:59:04.023693Z",
+    "total_row_count": 50,
+    "fetched_at": "2026-09-16T10:26:45.130858+00:00"
+  },
+  "q4_token_categories": {
+    "query_id": 8725347,
+    "execution_id": "01M2MKNQ4ZH9W0PXHPMZ31AH6T",
+    "execution_ended_at": "2026-09-16T08:00:02.580645Z",
+    "total_row_count": 105,
+    "fetched_at": "2026-09-16T10:26:45.355162+00:00"
+  },
+  "q5_category_distribution": {
+    "query_id": 8725434,
+    "execution_id": "01M2MKR7F2GS36G9DR1NBGB88E",
+    "execution_ended_at": "2026-09-16T08:02:42.960359Z",
+    "total_row_count": 9,
+    "fetched_at": "2026-09-16T10:26:45.542434+00:00"
+  },
+  "q6_dex_usage": {
+    "query_id": 8725506,
+    "execution_id": "01M2J9CX9AFMRG58QFACR370P5",
+    "execution_ended_at": "2026-09-15T10:22:05.327556Z",
+    "total_row_count": 89,
+    "fetched_at": "2026-09-16T10:26:45.719030+00:00"
+  },
+  "q7_routing": {
+    "query_id": 8725850,
+    "execution_id": "01M2KC5A69AK7BVATAN6RAJWS4",
+    "execution_ended_at": "2026-09-15T20:30:58.256994Z",
+    "total_row_count": 8,
+    "fetched_at": "2026-09-16T10:26:45.894517+00:00"
+  },
+  "q8_fee_rate": {
+    "query_id": 8726471,
+    "execution_id": "01M2MKVXR49B312DR0D9RHP4M9",
+    "execution_ended_at": "2026-09-16T08:04:18.227128Z",
+    "total_row_count": 7,
+    "fetched_at": "2026-09-16T10:26:46.062148+00:00"
+  },
+  "q9_weekly_categories": {
+    "query_id": 8726069,
+    "execution_id": "01M2K586PABJ9ZJYH4R8G762HD",
+    "execution_ended_at": "2026-09-15T18:29:18.502267Z",
+    "total_row_count": 204,
+    "fetched_at": "2026-09-16T10:26:46.238826+00:00"
+  }
+}
