@@ -1,10 +1,19 @@
-category,mapping_method,swap_events,transactions_est,signers_est,dex_programs_est,pct_of_swap_events,estimate_exceeds_events,method
-Stablecoin,manual,182984804,141227682,2400577,75,39.3313869844749,False,all_events
-Native Solana,manual,177404146,159373771,6433223,74,38.13186104227696,False,all_events
-Unmapped,none,27665477,25968615,1065941,73,5.94651336182588,False,all_events
-Meme Coin,suffix,27578814,26577030,1427176,23,5.927885716711505,False,all_events
-Meme Coin,manual,23503392,22359632,3399235,34,5.051900409171745,False,all_events
-Cross-Chain Asset,manual,18191049,15297319,141351,42,3.91004702156877,False,all_events
-Liquid Staking,manual,5724170,5195875,65122,32,1.230372908096356,False,all_events
-Tokenized RWA,manual,2013515,1971003,27915,22,0.432791881800442,False,all_events
-Other,manual,173258,182595,261,1,0.037240674073439,True,all_events
+category,mapping_method,swap_events,transactions_est,signers_est,dex_programs_est,pct_of_swap_events,estimate_exceeds_events,method,observations,pct_of_total,final_routes
+Stablecoin,manual,182984804.0,141227682.0,2400577.0,75.0,39.3313869844749,False,all_events,182984804,39.3313869844749,
+Native Solana,manual,177404146.0,159373771.0,6433223.0,74.0,38.13186104227696,False,all_events,177404146,38.13186104227696,
+Unmapped,none,27665477.0,25968615.0,1065941.0,73.0,5.94651336182588,False,all_events,27665477,5.94651336182588,
+Meme Coin,suffix,27578814.0,26577030.0,1427176.0,23.0,5.927885716711505,False,all_events,27578814,5.927885716711505,
+Meme Coin,manual,23503392.0,22359632.0,3399235.0,34.0,5.051900409171745,False,all_events,23503392,5.051900409171745,
+Cross-Chain Asset,manual,18191049.0,15297319.0,141351.0,42.0,3.91004702156877,False,all_events,18191049,3.91004702156877,
+Liquid Staking,manual,5724170.0,5195875.0,65122.0,32.0,1.230372908096356,False,all_events,5724170,1.230372908096356,
+Tokenized RWA,manual,2013515.0,1971003.0,27915.0,22.0,0.432791881800442,False,all_events,2013515,0.432791881800442,
+Other,manual,173258.0,182595.0,261.0,1.0,0.037240674073439,True,all_events,173258,0.037240674073439,
+Native Solana,manual,,,,,,,final_output,85509023,38.29,85509023.0
+Stablecoin,manual,,,,,,,final_output,69913352,31.31,69913352.0
+Meme Coin,suffix,,,,,,,final_output,24575948,11.0,24575948.0
+Unmapped,unmapped,,,,,,,final_output,19592386,8.77,19592386.0
+Meme Coin,manual,,,,,,,final_output,15924132,7.13,15924132.0
+Cross-Chain Asset,manual,,,,,,,final_output,5773455,2.59,5773455.0
+Liquid Staking,manual,,,,,,,final_output,1005525,0.45,1005525.0
+Tokenized RWA,manual,,,,,,,final_output,855331,0.38,855331.0
+Other,manual,,,,,,,final_output,173207,0.08,173207.0

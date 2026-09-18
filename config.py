@@ -17,6 +17,11 @@ QUERIES = {
     "q7_routing":             8725850,
     "q8_fee_rate":            8726471,
     "q9_weekly_categories":   8726069,
+    # Part 2 — final output token per Jupiter route
+    "q10_route_types":              8760232,
+    "q11_final_output_categories":  8760274,
+    "q13_weekly_final_output":      8760447,
+    "q14_intermediate_tokens":      8760737,
 }
 
 API_BASE = "https://api.dune.com/api/v1"
@@ -27,9 +32,11 @@ MAX_RETRIES = 3
 PERIOD_START = "2026-01-01"
 PERIOD_END = "2026-07-01"   # exclusive
 
-# Label for how categories were assigned. Part 2 of the Solana project
-# will add "final_output" rows to the same tables.
-METHOD = "all_events"
+# How a category was assigned to an observation.
+#   all_events   — every swap event output is counted (Part 1, Q5/Q9)
+#   final_output — only the final token of a non-circular route (Part 2, Q11/Q13)
+METHOD_ALL_EVENTS = "all_events"
+METHOD_FINAL_OUTPUT = "final_output"
 
 BASE_DIR = Path(__file__).resolve().parent
 RAW_DIR = BASE_DIR / "data" / "raw"

@@ -15,3 +15,11 @@ C2: transactions equal Q1,pass,"267,562,076 vs 267,562,076"
 Q9: each week sums to 100%,pass,max deviation 0.000000
 Q9: event total equals Q1,pass,"465,238,625 vs 465,238,625"
 Categories known,pass,unknown: none
+Q10: route shares sum to 100%,pass,99.99
+Q11: shares sum to 100%,pass,100.00
+Q11: final outputs match non-circular routes,pass,"223,322,359 vs 223,320,819 (routes with several final tokens explain the difference)"
+Q13: final routes equal Q11,pass,"223,322,359 vs 223,322,359"
+Q13: each week sums to 100%,pass,max deviation 0.02
+Q13: same weeks as Q9,pass,27 vs 27 weeks
+Part 2 categories known,pass,unknown: none
+Q14: intermediate tokens mapped in Q4,pass,0 unmapped

@@ -75,5 +75,33 @@
     "execution_ended_at": "2026-09-15T18:29:18.502267Z",
     "total_row_count": 204,
     "fetched_at": "2026-09-16T10:26:46.238826+00:00"
+  },
+  "q10_route_types": {
+    "query_id": 8760232,
+    "execution_id": "01M2R8J6RWYZEHS5GYGAQY0R86",
+    "execution_ended_at": "2026-09-17T18:04:12.874713Z",
+    "total_row_count": 4,
+    "fetched_at": "2026-09-18T09:05:20.255509+00:00"
+  },
+  "q11_final_output_categories": {
+    "query_id": 8760274,
+    "execution_id": "01M2R985S99EK2B3TYMSVW8ZKR",
+    "execution_ended_at": "2026-09-17T18:16:44.925988Z",
+    "total_row_count": 9,
+    "fetched_at": "2026-09-18T09:05:20.428377+00:00"
+  },
+  "q13_weekly_final_output": {
+    "query_id": 8760447,
+    "execution_id": "01M2RBGQMMFRQNW0R2R20QA39Q",
+    "execution_ended_at": "2026-09-17T18:54:49.875438Z",
+    "total_row_count": 231,
+    "fetched_at": "2026-09-18T09:05:20.616277+00:00"
+  },
+  "q14_intermediate_tokens": {
+    "query_id": 8760737,
+    "execution_id": "01M2RCA7HNWK4RWATX0D0TGF3V",
+    "execution_ended_at": "2026-09-17T19:09:16.374807Z",
+    "total_row_count": 20,
+    "fetched_at": "2026-09-18T09:05:20.794818+00:00"
   }
 }

@@ -1,0 +1,5 @@
+route_type,routes,pct_of_routes,is_circular
+Simple,166652857,58.53,False
+Circle,61396063,21.56,True
+Multi-Hop,55103293,19.35,False
+Split,1564669,0.55,False

@@ -125,7 +125,7 @@ def build_dim_week(q9):
 # --------------------------------------------------------------------------
 def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame], pd.DataFrame]:
     checks = Checks()
-    method = config.METHOD
+    method = config.METHOD_ALL_EVENTS
 
     # --- clean raw frames ------------------------------------------------
     q1 = to_numeric(raw["q1_baseline"].copy(), [
@@ -180,6 +180,26 @@ def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame]
     q9["week_start"] = to_utc_timestamp(q9["week"]).dt.normalize()
     q9 = to_numeric(q9, ["swap_events", "pct_of_week"])
 
+    # --- Part 2: final output token per route ----------------------------
+    q10 = raw["q10_route_types"].copy()
+    q10["route_type"] = clean_text(q10["route_type"])
+    q10 = to_numeric(q10, ["routes", "share_of_routes_pct"])
+
+    q11 = raw["q11_final_output_categories"].copy()
+    for col in ("category", "mapping_method"):
+        q11[col] = clean_text(q11[col])
+    q11 = to_numeric(q11, ["final_routes", "share_of_final_routes_pct"])
+
+    q13 = raw["q13_weekly_final_output"].copy()
+    for col in ("category", "mapping_method"):
+        q13[col] = clean_text(q13[col])
+    q13["week_start"] = to_utc_timestamp(q13["week"]).dt.normalize()
+    q13 = to_numeric(q13, ["final_routes", "share_of_final_routes_pct"])
+
+    q14 = raw["q14_intermediate_tokens"].copy()
+    q14["token_mint"] = clean_text(q14["token_mint"])
+    q14 = to_numeric(q14, ["routes_as_intermediate", "share_of_routes_with_intermediate_pct"])
+
     # --- consistency checks ----------------------------------------------
     b = q1.iloc[0]
     checks.add("Q4: 105 unique token mints", q4["token_mint"].nunique() == 105 and len(q4) == 105,
@@ -208,6 +228,35 @@ def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame]
     unknown = set(q5["category"]) - set(CATEGORY_ORDER)
     checks.add("Categories known", not unknown, f"unknown: {sorted(unknown) or 'none'}")
 
+    total_routes = q10["routes"].sum()
+    circular_routes = int(q10.loc[q10["route_type"] == "Circle", "routes"].sum())
+    final_routes_q11 = q11["final_routes"].sum()
+
+    # Part 2 shares are rounded to two decimals in SQL, so allow 0.05 pp.
+    checks.add("Q10: route shares sum to 100%", abs(q10["share_of_routes_pct"].sum() - 100) < 0.05,
+               f"{q10['share_of_routes_pct'].sum():.2f}")
+    checks.add("Q11: shares sum to 100%", abs(q11["share_of_final_routes_pct"].sum() - 100) < 0.05,
+               f"{q11['share_of_final_routes_pct'].sum():.2f}")
+    checks.add(
+        "Q11: final outputs match non-circular routes",
+        abs(final_routes_q11 - (total_routes - circular_routes)) / (total_routes - circular_routes) < 0.0001,
+        f"{final_routes_q11:,} vs {total_routes - circular_routes:,} "
+        f"(routes with several final tokens explain the difference)",
+        severity="warning",
+    )
+    checks.add("Q13: final routes equal Q11", q13["final_routes"].sum() == final_routes_q11,
+               f"{q13['final_routes'].sum():,} vs {final_routes_q11:,}")
+    weekly_final = q13.groupby("week_start")["share_of_final_routes_pct"].sum()
+    checks.add("Q13: each week sums to 100%", ((weekly_final - 100).abs() < 0.05).all(),
+               f"max deviation {(weekly_final - 100).abs().max():.2f}")
+    checks.add("Q13: same weeks as Q9", set(q13["week_start"]) == set(q9["week_start"]),
+               f"{q13['week_start'].nunique()} vs {q9['week_start'].nunique()} weeks")
+    unknown_p2 = set(q11["category"]) - set(CATEGORY_ORDER)
+    checks.add("Part 2 categories known", not unknown_p2, f"unknown: {sorted(unknown_p2) or 'none'}")
+    unmapped_hops = set(q14["token_mint"]) - set(q4["token_mint"])
+    checks.add("Q14: intermediate tokens mapped in Q4", not unmapped_hops,
+               f"{len(unmapped_hops)} unmapped")
+
     # --- dimensions ------------------------------------------------------
     dim_token = build_dim_token(q2, q3, q4)
     dim_category = build_dim_category()
@@ -228,11 +277,23 @@ def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame]
     fact_token_activity["in_volume_top50"] = fact_token_activity["volume_usd"].notna()
     fact_token_activity["method"] = method
 
-    fact_category_distribution = q5.rename(columns={
+    cat_all_events = q5.rename(columns={
         "user_swaps": "transactions_est", "traders": "signers_est",
         "dex_programs": "dex_programs_est", "user_swaps_exceeds_events": "estimate_exceeds_events",
     })
-    fact_category_distribution["method"] = method
+    cat_all_events["method"] = method
+    cat_all_events["observations"] = cat_all_events["swap_events"]
+    cat_all_events["pct_of_total"] = cat_all_events["pct_of_swap_events"]
+
+    cat_final_output = q11.rename(columns={"share_of_final_routes_pct": "pct_of_total"})
+    cat_final_output["method"] = config.METHOD_FINAL_OUTPUT
+    cat_final_output["observations"] = cat_final_output["final_routes"]
+
+    # observations = swap events (all_events) or final-output routes (final_output).
+    # The two are different units; only shares are comparable between methods.
+    fact_category_distribution = pd.concat(
+        [cat_all_events, cat_final_output], ignore_index=True
+    )
 
     fact_dex_usage = q6.drop(columns=["dex_name"]).rename(columns={
         "user_swaps": "transactions_est", "distinct_tokens": "output_tokens_est",
@@ -255,13 +316,38 @@ def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame]
     )
     fact_fees["method"] = method
 
-    fact_weekly_category = q9[["week_start", "category", "swap_events", "pct_of_week"]].copy()
-    fact_weekly_category["method"] = method
+    week_all_events = q9[["week_start", "category", "swap_events", "pct_of_week"]].copy()
+    week_all_events["method"] = method
+    week_all_events["observations"] = week_all_events["swap_events"]
+    week_all_events["pct_of_total"] = week_all_events["pct_of_week"]
+
+    week_final_output = (
+        q13.groupby(["week_start", "category"], as_index=False)
+           .agg(final_routes=("final_routes", "sum"),
+                pct_of_total=("share_of_final_routes_pct", "sum"))
+    )
+    week_final_output["method"] = config.METHOD_FINAL_OUTPUT
+    week_final_output["observations"] = week_final_output["final_routes"]
+
+    fact_weekly_category = pd.concat(
+        [week_all_events, week_final_output], ignore_index=True
+    )
+
+    fact_route_type = q10.rename(columns={"share_of_routes_pct": "pct_of_routes"})
+    fact_route_type["is_circular"] = fact_route_type["route_type"] == "Circle"
+
+    fact_intermediate_token = q14.rename(columns={
+        "share_of_routes_with_intermediate_pct": "pct_of_routes_with_intermediate",
+    })
 
     kpi_baseline = q1.assign(
         avg_events_per_transaction=q1["total_swap_events"] / q1["total_user_swaps"],
         pct_events_top_100_tokens=c1["pct_top_100"].iloc[0],
         pct_events_top_500_tokens=c1["pct_top_500"].iloc[0],
+        total_routes=total_routes,
+        circular_routes=circular_routes,
+        pct_circular_routes=circular_routes * 100.0 / total_routes,
+        final_output_routes=int(total_routes - circular_routes),
     )
 
     tables = {
@@ -275,6 +361,8 @@ def transform_all(raw: dict[str, pd.DataFrame]) -> tuple[dict[str, pd.DataFrame]
         "fact_routing": fact_routing,
         "fact_fees": fact_fees,
         "fact_weekly_category": fact_weekly_category,
+        "fact_route_type": fact_route_type,
+        "fact_intermediate_token": fact_intermediate_token,
         "kpi_baseline": kpi_baseline,
     }
     return tables, checks.to_frame()
