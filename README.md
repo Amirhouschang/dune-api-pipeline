@@ -28,7 +28,7 @@ cleaning, validation across queries, and a model built for a BI tool.
 - Corrects wrong or missing metadata by mint address (`test` → PENGU, `SPLT` → BIRB, missing → bSOL).
 - Parses Dune timestamps and enforces numeric types.
 
-**Check** — 21 automated checks, written to `data/clean/quality_checks.csv`
+**Check** — 24 automated checks, written to `data/clean/quality_checks.csv`
 - Cross-query totals: event and transaction totals in Q5, Q6, Q7, C2 and Q9 must equal Q1.
 - Shares sum to 100%; each week in Q9 and Q13 sums to 100%.
 - Part 2: Q13 must match Q11, both must cover the same 27 weeks as Q9, and final
@@ -61,10 +61,10 @@ The `method` column separates how a category was assigned:
 - **`all_events`** — every swap event output is counted, including intermediate
   routing hops (465,238,625 events).
 - **`final_output`** — only the final token of each non-circular Jupiter route is
-  counted, which is what the trader actually receives (223,322,359 routes).
+  counted, which is what the trader actually receives (223,322,359 observations).
 
 The `observations` column holds the matching count for each method — swap events
-or final-output routes. The two are different units, so **only shares are
+or final-output observations. The two are different units, so **only shares are
 comparable between methods**, not absolute numbers.
 
 ---
@@ -110,7 +110,7 @@ so the pipeline can be reproduced with `--offline` without a Dune account.
 
 ## Power BI dashboard
 
-File: `powerbi/jupiter_trading_dashboard.pbix` (Power BI Desktop, Windows)
+File: `powerbi/dune-api-pipeline.pbix` (Power BI Desktop, Windows)
 
 ### Model
 
@@ -120,13 +120,13 @@ fact table that carries a `method` column.
 
 ![Data model](powerbi/screenshots/00_data_model.png)
 
-Relationships (all one-to-many, single direction, from dimension to fact):
+Relationships (one-to-many, single direction, from dimension to fact, except `fact_intermediate_token` ↔ `dim_token`, which is one-to-one):
 
 - `dim_category[category]` → `fact_category_distribution`, `fact_routing`, `fact_fees`, `fact_weekly_category`, `dim_token`
 - `dim_token[token_mint]` → `fact_token_activity`, `fact_intermediate_token`
 - `dim_dex[dex_program]` → `fact_dex_usage[dex_program]`
 - `dim_week[week_start]` → `fact_weekly_category[week_start]`
-- `dim_method[method]` → `method` in all fact tables that have both counting methods
+- `dim_method[method]` → `method` in all fact tables that carry a `method` column
 
 `kpi_baseline`, `quality_checks` and `fact_route_type` have no relationships:
 the first holds single-row headline figures, the second the pipeline check log,
@@ -187,7 +187,7 @@ ratio, and the fee-event coverage the ratio depends on (`all_events` only)
 
 ![DEX Programs](powerbi/screenshots/05_dex_programs.png)
 
-**6. Data Quality** — results of the 21 automated pipeline checks
+**6. Data Quality** — results of the 24 automated pipeline checks
 
 ![Data Quality](powerbi/screenshots/06_data_quality.png)
 
@@ -201,6 +201,10 @@ methods, and the tokens Jupiter routes through
 After re-running the pipeline, click **Refresh** in Power BI. The CSVs must stay
 in the same folder under the same names. If a CSV gains columns, the `Columns =`
 parameter in the query's `Source` step has to be raised to match.
+
+The `.pbix` loads the CSVs from a local path on the author's computer. After
+cloning, point the data sources to your local `data/clean/` folder (Home →
+Transform data → Data source settings) before refreshing.
 
 ---
 
@@ -221,7 +225,7 @@ dune-api-pipeline/
 │   ├── raw/             # cached API results (15 queries)
 │   └── clean/           # 13 tables + quality_checks.csv for Power BI
 └── powerbi/
-    ├── jupiter_trading_dashboard.pbix
+    ├── dune-api-pipeline.pbix
     └── screenshots/
         ├── 00_data_model.png
         ├── 01_overview.png
@@ -243,7 +247,7 @@ dune-api-pipeline/
 - Columns ending in `_est` are `approx_distinct` estimates (~2% error). At small
   counts an estimate can exceed the exact event count; such rows are flagged.
 - `observations` holds different units per method — swap events or final-output
-  routes — so only shares are comparable between the two.
+  observations — so only shares are comparable between the two.
 - Token, routing and fee data exist at event level only (`all_events`). Final-output
   analysis is at route level.
 - `fact_token_activity` combines the top 100 by events and the top 50 by priced
