@@ -259,3 +259,9 @@ dune-api-pipeline/
 ## Security
 
 The API key is read from `.env`, which is excluded by `.gitignore`. Never commit it.
+
+---
+
+## Rights
+  
+© 2026 Amirhoushang Rahmannejad. All rights reserved. You are welcome to read and review this project. Copying, modifying or redistributing it requires my written permission.
